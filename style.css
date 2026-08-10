@@ -765,9 +765,7 @@ section {
     width: 100%;
     height: 100%;
 
-    background:
-        url('image/profile.PNG');
-        center 25% / cover no-repeat;
+    background: url('image/profile.PNG') center 25% / cover no-repeat;
 
     z-index: 0;
 
