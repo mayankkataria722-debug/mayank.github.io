@@ -1,6 +1,5 @@
 /* =========================================================
    MAYANK KATARIA — PORTFOLIO
-   Premium Dark Developer Portfolio
 ========================================================= */
 
 * {
@@ -767,7 +766,7 @@ section {
     height: 100%;
 
     background:
-        url("../image/IMG_1909%20(1).PNG")
+        url('image/profile.PNG');
         center 25% / cover no-repeat;
 
     z-index: 0;
