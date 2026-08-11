@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JobTrack | Job Application Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                Job<span>Track</span>
+            </div>
+
+            <div class="nav-links">
+                <a href="#dashboard">Dashboard</a>
+                <a href="#applications">Applications</a>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- Dashboard -->
+        <section id="dashboard" class="dashboard">
+
+            <div class="hero">
+                <div>
+                    <p class="eyebrow">JOB APPLICATION MANAGER</p>
+
+                    <h1>
+                        Keep your job search
+                        <span>organized.</span>
+                    </h1>
+
+                    <p>
+                        Track applications, interviews and opportunities
+                        from one simple dashboard.
+                    </p>
+                </div>
+
+                <button id="openModalBtn" class="primary-btn">
+                    + Add Application
+                </button>
+            </div>
+
+
+            <!-- Statistics -->
+            <div class="stats">
+
+                <div class="stat-card">
+                    <p>Total Applications</p>
+                    <h2 id="totalApplications">0</h2>
+                </div>
+
+                <div class="stat-card">
+                    <p>Applied</p>
+                    <h2 id="appliedCount">0</h2>
+                </div>
+
+                <div class="stat-card">
+                    <p>Interviews</p>
+                    <h2 id="interviewCount">0</h2>
+                </div>
+
+                <div class="stat-card">
+                    <p>Selected</p>
+                    <h2 id="selectedCount">0</h2>
+                </div>
+
+                <div class="stat-card">
+                    <p>Rejected</p>
+                    <h2 id="rejectedCount">0</h2>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Applications -->
+        <section id="applications" class="applications">
+
+            <div class="section-header">
+
+                <div>
+                    <p class="eyebrow">YOUR APPLICATIONS</p>
+                    <h2>Application History</h2>
+                </div>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search company..."
+                >
+
+            </div>
+
+
+            <!-- Filter -->
+            <div class="filters">
+
+                <button class="filter-btn active" data-filter="All">
+                    All
+                </button>
+
+                <button class="filter-btn" data-filter="Applied">
+                    Applied
+                </button>
+
+                <button class="filter-btn" data-filter="Interview">
+                    Interview
+                </button>
+
+                <button class="filter-btn" data-filter="Selected">
+                    Selected
+                </button>
+
+                <button class="filter-btn" data-filter="Rejected">
+                    Rejected
+                </button>
+
+            </div>
+
+
+            <!-- Application List -->
+            <div id="applicationList" class="application-list">
+
+                <div class="empty-state">
+
+                    <h3>No applications yet</h3>
+
+                    <p>
+                        Start tracking your job applications
+                        by adding your first one.
+                    </p>
+
+                    <button
+                        id="emptyAddBtn"
+                        class="primary-btn">
+                        + Add Application
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Add Application Modal -->
+    <div id="modal" class="modal">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <div>
+                    <p class="eyebrow">NEW APPLICATION</p>
+                    <h2>Add Job Application</h2>
+                </div>
+
+                <button id="closeModalBtn" class="close-btn">
+                    ×
+                </button>
+
+            </div>
+
+
+            <form id="applicationForm">
+
+                <div class="form-group">
+
+                    <label for="company">
+                        Company
+                    </label>
+
+                    <input
+                        type="text"
+                        id="company"
+                        placeholder="e.g. Google"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="jobTitle">
+                        Job Title
+                    </label>
+
+                    <input
+                        type="text"
+                        id="jobTitle"
+                        placeholder="e.g. Software Engineering Intern"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="date">
+                            Date Applied
+                        </label>
+
+                        <input
+                            type="date"
+                            id="date"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="status">
+                            Status
+                        </label>
+
+                        <select id="status">
+
+                            <option value="Applied">
+                                Applied
+                            </option>
+
+                            <option value="Interview">
+                                Interview
+                            </option>
+
+                            <option value="Selected">
+                                Selected
+                            </option>
+
+                            <option value="Rejected">
+                                Rejected
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="jobLink">
+                        Job Link
+                    </label>
+
+                    <input
+                        type="url"
+                        id="jobLink"
+                        placeholder="https://..."
+                    >
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="primary-btn full-width">
+                    Save Application
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+
+        <p>
+            Built by <strong>Mayank Kataria</strong>
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
